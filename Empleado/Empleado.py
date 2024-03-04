@@ -9,6 +9,7 @@ class Empleado:
 
     nombre=''
     apellido=''
+    numeroDeHijos=''
     '''-----------------
     # 1 = Masculino y 2 = Femenino
     -----------------'''
@@ -25,6 +26,13 @@ class Empleado:
     '''----------------------------
     # Metodos
     ----------------------------'''
+
+    def __init__(self, nombre, apellido, sexo, salario, numeroDeHijos):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.sexo = sexo
+        self.salario = salario
+        self.numeroDeHijos = numeroDeHijos
 
     def CambiarEmpleado(self, nNombre, nApellido, nSexo, NsSalario):  
            #aqui va el codigo del nuevo empleado
@@ -76,4 +84,27 @@ class Empleado:
     
     def ConsultarDiaCumpleaños(self):
         return "El dia de su cumpleaños es "+self.fechaNacimiento.ConsultarDia()
+    
+    def InformarNumeroDeHijos(self):
+         return self.numeroDeHijos
+    
+    def AuxilioEducativo(self):
+      auxilioPorcentaje = self.salario*00.5
+      auxilioTotal = auxilioPorcentaje * self.numeroDeHijos
+      return " El auxilio educativo es"+auxilioTotal
+    
+    def DiferenciaSalarial(self, segundoEmpleado) :
+        return abs( self.salario - segundoEmpleado.salario) 
+    
+    def CalcularAuxilioEducativo(self, porcentaje):
+        auxilio = self.salario * (porcentaje / 100)
+        return auxilio
+    
+
+        
+      
+
+
+
+
   

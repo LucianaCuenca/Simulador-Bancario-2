@@ -1,31 +1,36 @@
 class CuentaAhorros:
-        ''''---------------
-        #atributos
-        -------------'''
-        saldo="1000"
-        interesMensual="0.6"
-        '''--------------
-        #metodos
-        -----------------'''
+    ''''---------------
+    #atributos
+    -------------'''
+    saldo="1000"
+    interesMensual="0.6"
+    '''--------------
+    #metodos
+    -----------------'''
 
-        def ConsultarSaldo(self):
-             return self.saldo
+    def ConsultarSaldo(self):
+      return self.saldo
         
-            
-        def ConsignarValor(self):
-            nSaldo = self.saldo + self.saldoConsignado
-            self.saldo = nSaldo
-
-        def CalcularInteresMensual(self):
-            nSaldo = self.saldo * 0.6
-            nSaldo = nSaldo + self.saldo
-            self.saldo = nSaldo
-            return nSaldo
-        
-        def DuplicarAhorro(self):
-             self.saldo*2
-
-             
+    def ConsultarSaldo(self):
+      return self.saldo
+    
+    def ConsignarMonto(self, monto):
+        # #Forma 1
+        # self.saldo += monto
+        # # Forma 2
+        # self.saldo = self.saldo + monto
+        # # Forma 3
+        total = self.saldo + monto
+        self.saldo = total
+    
+    def RetirarMonto(self, monto):
+        # #Forma 1
+        # self.saldo -= monto
+        # # Forma 2
+        # self.saldo = self.saldo - monto
+        # # Forma 3
+        total = self.saldo - monto
+        self.saldo = total
         
           
  
