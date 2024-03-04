@@ -96,5 +96,11 @@ class SimuladorBancario:
         self.tipoDeCliente = nuevoTipo 
         return nuevoTipo
 
-   
+   def Retirarv(self):
+        total = self.CalcularSaldoTotal()
+        self.corriente.RetirarMonto(self.corriente.ConsultarSaldo())
+        self.ahorros.RetirarMonto(self.ahorros.ConsultarSaldo())
+        
+        return "Retiraste total: "+total 
+
     
